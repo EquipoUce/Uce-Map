@@ -1,6 +1,9 @@
 package com.example.ucemap.service.informacionSingleton;
 
 import com.example.ucemap.repository.modelo.Informacion;
+import com.example.ucemap.repository.modelo.ListaOpciones;
+
+import java.util.List;
 
 public class InformacionHolder {
     private static InformacionHolder instanciaUnica;
@@ -10,6 +13,11 @@ public class InformacionHolder {
     private static String nombreEntidadAsociada;
     private static Informacion informacion;
     private static boolean informacionInicializada = false;
+
+    private static boolean banderalistaOpciones = false;
+
+    private static List<ListaOpciones> listaOpcionesCreada;
+
     private InformacionHolder() {}
     public static InformacionHolder obtenerInstancia() {
         if (instanciaUnica == null) {
@@ -64,6 +72,22 @@ public class InformacionHolder {
 
     public static void setInformacionInicializada(boolean informacionInicializada) {
         InformacionHolder.informacionInicializada = informacionInicializada;
+    }
+
+    public static boolean getBanderalistaOpciones() {
+        return banderalistaOpciones;
+    }
+
+    public static void setBanderalistaOpciones(boolean banderalistaOpciones) {
+        InformacionHolder.banderalistaOpciones = banderalistaOpciones;
+    }
+
+    public static List<ListaOpciones> getListaOpcionesCreada() {
+        return listaOpcionesCreada;
+    }
+
+    public static void setListaOpcionesCreada(List<ListaOpciones> listaOpcionesCreada) {
+        InformacionHolder.listaOpcionesCreada = listaOpcionesCreada;
     }
 }
 

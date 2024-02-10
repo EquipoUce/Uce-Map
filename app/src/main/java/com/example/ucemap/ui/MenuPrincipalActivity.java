@@ -34,6 +34,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
                 InformacionHolder.setTipoEntidadAsociada(DatosJason.FACULTAD_NOMBRE_DOCUMENTO_INTERNO);
                 InformacionHolder.setTipoAtributoAsociado(DatosJason.ATRIBUTO_GENERAL_NOMBRE);
                 startActivity(intent);
+                InformacionHolder.setBanderalistaOpciones(false);
                 finish();
             }
         });
@@ -46,6 +47,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
                 InformacionHolder.setTipoEntidadAsociada(DatosJason.EDIFICIO_NOMBRE_DOCUMENTO_INTERNO);
                 InformacionHolder.setTipoAtributoAsociado(DatosJason.ATRIBUTO_GENERAL_NOMBRE);
                 startActivity(intent);
+                InformacionHolder.setBanderalistaOpciones(false);
                 finish();
             }
         });

@@ -79,4 +79,7 @@ public class RecycleViewAdaptadorListaOpciones extends RecyclerView.Adapter<Recy
         return listaOpcioneModelos.size();
     }
 
+
+
+
 }

@@ -23,6 +23,7 @@ import com.example.ucemap.repository.modelo.Posicion;
 import com.example.ucemap.service.informacionFactory.IInformacionFactory;
 import com.example.ucemap.repository.modelo.Informacion;
 import com.example.ucemap.service.informacionFactory.InformacionFactory;
+import com.example.ucemap.service.informacionSingleton.DataManager;
 import com.example.ucemap.service.informacionSingleton.InformacionHolder;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -109,6 +110,8 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         }
 
+        DataManager dataManager = DataManager.getInstance();
+
         //-------------------------------------------------------------------------------------------
         posicion = InformacionHolder.getInformacion().getPosicion(); //<--- Posicion
         //-------------------------------------------------------------------------------------------
@@ -119,6 +122,11 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
                 MapaActivity.this.validar =true;
                 getLastLocation();
                 new GetRouteTask().execute(origenLL,destinoLL);
+                if (!DataManager.getBanderaLocalizacion()){
+                    DataManager.getInstance().setLastKnownLocation(currentLocation);
+                    DataManager.setBanderaLocalizacion(true);
+                }
+                InformacionHolder.setBanderalistaOpciones(true);
                 //finish();
             }
         });
@@ -193,8 +201,16 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mapa = googleMap;
         googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+
         if(validar){
+
+            if(currentLocation==null){
+                currentLocation=DataManager.getInstance().getLastKnownLocation();
+            }
+
+
             origenLL = new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude());
+
             origen = mapa.addMarker(new MarkerOptions().title("POCISION ORIGINAL")
                             .position(origenLL)
                             .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))

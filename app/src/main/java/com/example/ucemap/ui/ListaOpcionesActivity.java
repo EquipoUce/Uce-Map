@@ -4,14 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import com.example.ucemap.R;
-import com.example.ucemap.data.DatosJason;
 import com.example.ucemap.repository.modelo.ListaOpciones;
 import com.example.ucemap.service.informacionSingleton.InformacionHolder;
 import com.example.ucemap.service.listaOpcionesFactory.IListaOpcionesFactory;
@@ -38,16 +35,20 @@ public class ListaOpcionesActivity extends AppCompatActivity {
         TextView tipoListaOpciones = findViewById(R.id.tipoListaOpciones);
         tipoListaOpciones.setText(MenuPrincipalActivity.tituloLayout);
 
-        //Creamos la lista de Opciones
-        IListaOpcionesFactory iListaOpcionesFactory = ListaOpcionesFactory.generarListaOpciones(InformacionHolder.getTipoEntidadAsociada());
-
-        try {
-            listaOpciones = iListaOpcionesFactory.crearListaOpciones(getApplicationContext());
-        } catch (JSONException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        if (!InformacionHolder.getBanderalistaOpciones()) {
+            //Creamos la lista de Opciones
+            try {
+                IListaOpcionesFactory iListaOpcionesFactory = ListaOpcionesFactory.generarListaOpciones(InformacionHolder.getTipoEntidadAsociada());
+                listaOpciones = iListaOpcionesFactory.crearListaOpciones(this);
+                InformacionHolder.setListaOpcionesCreada(listaOpciones);
+                InformacionHolder.setBanderalistaOpciones(true);
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
+        listaOpciones = InformacionHolder.getListaOpcionesCreada();
 
         //Cargamos el Recycle con el nombre de las entidades escogidas
         recyclerViewListaOpciones = (RecyclerView) findViewById(R.id.recycleOpciones);
