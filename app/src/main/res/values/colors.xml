@@ -2,12 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorBordeBoton">#FFD51E</color>
+    <color name="colorBoton2Comb1">#80FFD51E</color>
+    <color name="colorBoton2Comb2">#90FF6347</color>
     <color name="colorSuperiorApp">#666666</color>
-    <color name="colorMediaApp">#2E4053</color>
     <color name="colorFondoApp">#303030</color>
-    <color name="colorPrimarioApp">#FF6347</color>
-    <color name="colorSecundarioApp"> #A9A9A9</color>
-    <color name="colorTerciarioApp">#673AB7</color>
-
+    <color name="colorFondoTipografia">#90303030</color>
+    <color name="colorPrimarioApp">#90800020</color>
+    <color name="colorSecundarioApp">#80708090</color>
+    <color name="colorBoton1Comb1">#6540E0D0</color>
+    <color name="colorBoton1Comb2">#75001F3F</color>
 </resources>

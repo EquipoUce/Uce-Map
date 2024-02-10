@@ -4,18 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fonfo_marmol_negro_blanco_dorado"
     tools:context=".ui.MainActivity">
 
     <Button
         android:id="@+id/botonComencemos"
-        android:layout_width="216dp"
-        android:layout_height="60dp"
+        android:layout_width="236dp"
+        android:layout_height="79dp"
+        android:background="@drawable/boton_modelo2"
+        android:fontFamily="@font/spicy_rice"
         android:text="Comencemos a navegar "
+        android:textColor="@color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745" />
+        app:layout_constraintVertical_bias="0.797" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="338dp"
+        android:layout_height="306dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308"
+        app:srcCompat="@drawable/logo_fondo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,15 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fonfo_marmol_negro_blanco_dorado"
     tools:context=".ui.MenuPrincipalActivity">
 
 
     <TextView
         android:id="@+id/tipoListaOpciones"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="328dp"
+        android:layout_height="52dp"
+        android:background="@drawable/boton_modelo2"
+        android:fontFamily="@font/crafty_girls"
         android:text="Lista Opciones"
-        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.148"
@@ -34,7 +39,6 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            />
+            android:layout_marginRight="20dp" />
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
