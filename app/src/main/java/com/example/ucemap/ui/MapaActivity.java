@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.Manifest;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -65,7 +66,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
     private Marker destino, origen;
 
     public FusedLocationProviderClient fusedLocationProviderClient;
-    public static boolean validar = false;
+    private boolean validar = false;
 
     private LatLng destinoLL, origenLL;
 
@@ -181,12 +182,12 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private boolean checkLocationPermission() {
         return ActivityCompat.checkSelfPermission(
-                this, android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
+                this,Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
     }
 
     private void requestLocationPermission() {
         ActivityCompat.requestPermissions(
-                this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_CODE);
+                this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_CODE);
     }
 
     @Override
