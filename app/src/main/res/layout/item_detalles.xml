@@ -33,6 +33,7 @@
                     android:layout_marginTop="10dp"
                     android:drawableLeft="@drawable/navigate_next_black_24dp"
                     android:drawablePadding="15dp"
+                    android:fontFamily="@font/courgette"
                     android:gravity="center_vertical|start"
                     android:text="TextView"
                     android:textColor="@color/black"
@@ -42,12 +43,13 @@
                 <TextView
                     android:id="@+id/textDetalle"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="34dp"
                     android:layout_marginLeft="28dp"
                     android:layout_marginTop="5dp"
+                    android:fontFamily="@font/courgette"
                     android:gravity="center_vertical|start"
                     android:text="TextView\n"
-                    android:textColor="@color/white"
+                    android:textColor="@color/colorFondoApp"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintTop_toBottomOf="@+id/textTitulo" />

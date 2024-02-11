@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fonfo_marmol_negro_blanco_dorado"
+    android:background="@drawable/fondo_general"
     tools:context=".ui.MenuPrincipalActivity">
 
 
@@ -12,11 +12,10 @@
         android:id="@+id/tipoListaOpciones"
         android:layout_width="328dp"
         android:layout_height="52dp"
-        android:background="@drawable/boton_modelo2"
-        android:fontFamily="@font/crafty_girls"
+        android:fontFamily="@font/courgette"
         android:text="Lista Opciones"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

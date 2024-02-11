@@ -20,7 +20,7 @@
                 android:id="@+id/imagenSeñaladorOpcion"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:background="@drawable/boton_modelo1"
+                android:background="@android:color/transparent"
                 android:src="@drawable/navigate_next_black_24dp" />
 
             <LinearLayout
@@ -35,10 +35,10 @@
                     android:id="@+id/textOpcion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/aclonica"
+                    android:fontFamily="@font/courgette"
                     android:gravity="center_vertical|start"
                     android:text="TextView"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>

@@ -4,35 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fonfo_marmol_negro_blanco_dorado"
+    android:background="@drawable/fondo_1"
     tools:context=".ui.MainActivity">
 
     <Button
         android:id="@+id/botonComencemos"
-        android:layout_width="236dp"
-        android:layout_height="79dp"
-        android:background="@drawable/boton_modelo2"
-        android:fontFamily="@font/spicy_rice"
+        android:layout_width="277dp"
+        android:layout_height="92dp"
+        android:background="@drawable/boton_modelo1"
+        android:fontFamily="@font/courgette"
+        android:foreground="@drawable/boton_modelo2"
         android:text="Comencemos a navegar "
-        android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.797" />
+        app:layout_constraintVertical_bias="0.838" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="338dp"
-        android:layout_height="306dp"
+        android:layout_width="354dp"
+        android:layout_height="370dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.308"
-        app:srcCompat="@drawable/logo_fondo" />
+        app:layout_constraintVertical_bias="0.276"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

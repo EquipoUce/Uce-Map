@@ -4,16 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fonfo_marmol_negro_blanco_dorado"
+    android:background="@drawable/fondo_general"
     tools:context=".ui.MainActivity">
 
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="358dp"
+        android:layout_height="283dp"
+        android:src="@drawable/icono_persona"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533" />
+
     <TextView
         android:id="@+id/mensajeUsuario"
-        android:layout_width="340dp"
+        android:layout_width="361dp"
         android:layout_height="131dp"
-        android:background="@drawable/fondo_tipografia"
-        android:fontFamily="@font/crafty_girls"
+        android:fontFamily="@font/courgette"
         android:text="¿Qué Quieres Visitar?"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -24,17 +35,19 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.328" />
+        app:layout_constraintVertical_bias="0.131" />
 
     <Button
         android:id="@+id/bottonFacultad"
         android:layout_width="216dp"
         android:layout_height="60dp"
         android:background="@drawable/boton_modelo1"
-        android:fontFamily="@font/lemon"
+        android:fontFamily="@font/courgette"
+        android:foreground="@drawable/boton_modelo2"
         android:text="Facultades"
-        android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -46,11 +59,13 @@
         android:id="@+id/bottonEdificio"
         android:layout_width="216dp"
         android:layout_height="60dp"
-        android:background="@drawable/boton_modelo2"
-        android:fontFamily="@font/lemon"
+        android:background="@drawable/boton_modelo1"
+        android:fontFamily="@font/courgette"
+        android:foreground="@drawable/boton_modelo2"
         android:text="Edificios"
-        android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -58,30 +73,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.946"
         tools:ignore="DuplicateIds" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="148dp"
-        android:layout_height="166dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
-        app:srcCompat="@drawable/icono_persona_pensando1" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="166dp"
-        android:layout_height="178dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.643"
-        app:srcCompat="@drawable/edificio2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

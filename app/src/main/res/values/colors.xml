@@ -2,13 +2,21 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorBoton2Comb1">#80FFD51E</color>
-    <color name="colorBoton2Comb2">#90FF6347</color>
+
+    <color name="colorMatrizDorado1">#77611C</color>
+    <color name="colorMatrizDorado2">#809C7F25</color>
+    <color name="colorMatrizDorado3">#90DDD67F</color>
+    <color name="colorMatrizDorado4">#80F3EBD5</color>
+    <color name="colorMatrizDorado5">#80B39639</color>
+    <color name="colorMatrizDorado6">#D8C16B</color>
+    <color name="colorMatrizDorado7">#90FFA500</color>
+
+    <color name="colorMatrizPlatino4">#90303030</color>
+    <color name="colorMatrizPlatino1">#90C0C0C0</color>
+    <color name="colorMatrizPlatino2">#90A0A0A0</color>
+    <color name="colorMatrizPlatino3">#808080</color>
+    <color name="colorMatrizPlatino5">#90E5E4E2</color>
+
     <color name="colorSuperiorApp">#666666</color>
     <color name="colorFondoApp">#303030</color>
-    <color name="colorFondoTipografia">#90303030</color>
-    <color name="colorPrimarioApp">#90800020</color>
-    <color name="colorSecundarioApp">#80708090</color>
-    <color name="colorBoton1Comb1">#6540E0D0</color>
-    <color name="colorBoton1Comb2">#75001F3F</color>
 </resources>

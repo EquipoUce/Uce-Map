@@ -4,10 +4,10 @@
         <shape android:shape="rectangle">
             <corners android:radius="15dp" />
             <gradient
-                android:startColor="@color/colorFondoTipografia"
-                android:centerColor="@color/colorSecundarioApp"
-                android:endColor="@color/colorFondoTipografia"
-                android:angle="45"
+                android:startColor="@color/colorMatrizDorado7"
+                android:centerColor="@color/colorMatrizDorado3"
+                android:endColor="@color/colorMatrizPlatino4"
+                android:angle="0"
                 />
         </shape>
     </item>

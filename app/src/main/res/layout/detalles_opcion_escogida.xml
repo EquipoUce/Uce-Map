@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="@drawable/fonfo_marmol_negro_blanco_dorado"
+    android:background="@drawable/fondo_general"
     app:cardCornerRadius="20dp"
     tools:context=".ui.MenuPrincipalActivity">
 
     <org.imaginativeworld.whynotimagecarousel.ImageCarousel
         android:id="@+id/carousel"
-        android:layout_width="389dp"
-        android:layout_height="412dp"
+        android:layout_width="341dp"
+        android:layout_height="380dp"
         android:layout_marginStart="10mm"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="10mm"
