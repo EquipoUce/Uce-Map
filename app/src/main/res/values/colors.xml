@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="colorMatrizDorado1">#77611C</color>
-    <color name="colorMatrizDorado2">#809C7F25</color>
+    <color name="colorMatrizDorado1">#95DAA520</color>
+    <color name="colorMatrizDorado2">#909C7F25</color>
     <color name="colorMatrizDorado3">#90DDD67F</color>
-    <color name="colorMatrizDorado4">#80F3EBD5</color>
-    <color name="colorMatrizDorado5">#80B39639</color>
-    <color name="colorMatrizDorado6">#D8C16B</color>
-    <color name="colorMatrizDorado7">#90FFA500</color>
+    <color name="colorMatrizDorado4">#90F3EBD5</color>
+    <color name="colorMatrizDorado5">#90B39639</color>
+    <color name="colorMatrizDorado6">#90D8C16B</color>
+    <color name="colorMatrizDorado7">#F8A204</color>
 
-    <color name="colorMatrizPlatino4">#90303030</color>
-    <color name="colorMatrizPlatino1">#90C0C0C0</color>
+    <color name="colorMatrizPlatino4">#90353434</color>
+    <color name="colorMatrizPlatino1">#909F9E9E</color>
     <color name="colorMatrizPlatino2">#90A0A0A0</color>
-    <color name="colorMatrizPlatino3">#808080</color>
-    <color name="colorMatrizPlatino5">#90E5E4E2</color>
+    <color name="colorMatrizPlatino3">#90808080</color>
+    <color name="colorMatrizPlatino5">#C1BEB9</color>
 
     <color name="colorSuperiorApp">#666666</color>
-    <color name="colorFondoApp">#303030</color>
+    <color name="colorFondoApp">#322F2F</color>
+    <color name="colorTipografia1">#FFFF99</color>
+    <color name="colorTipografia2">#CCCCCC</color>
+
 </resources>

@@ -3,5 +3,14 @@
     <style name="Base.Theme.UceMap" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/colorMatrizDorado1</item>
+        <item name="colorPrimaryVariant">@color/colorSuperiorApp</item>
+        <item name="buttonStyle">@style/CustomButtonStyle</item>
+    </style>
+
+    <style name="CustomButtonStyle" parent="Widget.Material3.Button">
+        <item name="android:background">@drawable/custom_button_background</item>
+        <!--<item name="android:textColor">@drawable/txt_btn_uno</item>-->
+        <!-- Otros atributos personalizados -->
     </style>
 </resources>
