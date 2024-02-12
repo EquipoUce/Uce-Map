@@ -1,8 +1,8 @@
-package com.example.ucemap.data;
+package com.example.ucemap.data.jason;
 
 import android.content.Context;
 
-import com.example.ucemap.repository.modelo.ListaOpciones;
+import com.example.ucemap.repository.modelo.OpcionEscogida;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -16,8 +16,7 @@ import java.util.List;
 
 public class DatosJason {
     public static final String DIRECTORIO_JASSON= "prototipo.json";
-    public static final String FACULTAD_NOMBRE_DOCUMENTO_INTERNO = "facultades";
-    public static final String EDIFICIO_NOMBRE_DOCUMENTO_INTERNO = "edificios";
+    public static final String[] DOCUMENTOS_INTERNOS = new String[]{"facultades", "edificios", "entradas"};
     public static final String ATRIBUTO_GENERAL_NOMBRE = "nombre";
 
     public static String leerJson(Context context) throws IOException
@@ -34,9 +33,9 @@ public class DatosJason {
     }
 
 
-    public static List<ListaOpciones> extraerUnAtributo(Context context, String nombreDocumentoInterno, String atributoParaExtraer) throws IOException, JSONException {
+    public static List<OpcionEscogida> extraerUnAtributo(Context context, String nombreDocumentoInterno, String atributoParaExtraer) throws IOException, JSONException {
         String jsonFileContent = leerJson(context);
-        List<ListaOpciones> opciones = new ArrayList<>();
+        List<OpcionEscogida> opciones = new ArrayList<>();
 
         JSONObject jsonObject = new JSONObject(jsonFileContent);
         JSONArray documentoArray = jsonObject.getJSONArray(nombreDocumentoInterno);
@@ -44,7 +43,7 @@ public class DatosJason {
         for (int i = 0; i < documentoArray.length(); i++) {
             JSONObject facultadObject = documentoArray.getJSONObject(i);
             String atributoExtraido = facultadObject.getString(atributoParaExtraer);
-            opciones.add(new ListaOpciones(atributoExtraido));
+            opciones.add(new OpcionEscogida(atributoExtraido));
         }
         return opciones;
     }

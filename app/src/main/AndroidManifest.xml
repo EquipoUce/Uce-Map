@@ -27,7 +27,6 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-
         <activity
             android:name=".ui.MainActivity"
             android:exported="true">
@@ -36,6 +35,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ui.MenuPrincipalActivity"
             android:exported="true">
@@ -43,6 +43,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ui.ListaOpcionesActivity"
             android:exported="true">
@@ -58,16 +59,24 @@
         <intent-filter>
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
+        </activity>
 
-    </activity>
         <activity
-            android:name=".ui.DetallesActivity"
+            android:name=".ui.InformacionActivity"
             android:exported="true">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
+        <activity
+            android:name=".ui.ListaEntradasActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
 
     </application>
 

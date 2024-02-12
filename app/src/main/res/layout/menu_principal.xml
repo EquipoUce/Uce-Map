@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_general"
+    android:background="@drawable/fondo_general_2"
     tools:context=".ui.MainActivity">
 
 
@@ -22,8 +22,8 @@
 
     <TextView
         android:id="@+id/mensajeUsuario"
-        android:layout_width="361dp"
-        android:layout_height="131dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/courgette"
         android:text="¿Qué Quieres Visitar?"
         android:textAlignment="center"

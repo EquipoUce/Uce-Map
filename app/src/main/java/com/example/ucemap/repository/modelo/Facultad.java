@@ -6,9 +6,12 @@ public class Facultad {
     private String nombre;
     private List<String> servicios;
     private List<String> imagenes;
-    private String descripcion;
+    private String informacion;
+    private List<String> detallesEntradas;
     private Double latitud;
     private Double longitud;
+
+    public static final String[] FACULTAD_ATRIBUTOS_JASON = new String[]{"nombre", "servicios","imagenes", "informacion","descripcion","latitud", "longitud"};
 
     public String getNombre() {
         return nombre;
@@ -34,12 +37,12 @@ public class Facultad {
         this.imagenes = imagenes;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getInformacion() {
+        return informacion;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setInformacion(String informacion) {
+        this.informacion = informacion;
     }
 
     public Double getLatitud() {
@@ -64,9 +67,18 @@ public class Facultad {
                 "nombre='" + nombre + '\'' +
                 ", servicios=" + servicios +
                 ", imagenes=" + imagenes +
-                ", descripcion='" + descripcion + '\'' +
+                ", descripcion='" + informacion + '\'' +
                 ", latitud=" + latitud +
                 ", longitud=" + longitud +
                 '}';
+    }
+
+
+    public List<String> getDetallesEntradas() {
+        return detallesEntradas;
+    }
+
+    public void setDetallesEntradas(List<String> detallesEntradas) {
+        this.detallesEntradas = detallesEntradas;
     }
 }

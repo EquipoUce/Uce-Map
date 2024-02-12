@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_1"
+    android:background="@drawable/fondo_principal"
     tools:context=".ui.MainActivity">
 
     <Button
@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.838" />
+        app:layout_constraintVertical_bias="0.843" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -30,10 +30,10 @@
         android:layout_height="370dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.277"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintVertical_bias="0.238"
+        app:srcCompat="@drawable/logo_map_uce" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

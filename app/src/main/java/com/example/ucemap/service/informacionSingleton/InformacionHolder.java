@@ -1,6 +1,6 @@
 package com.example.ucemap.service.informacionSingleton;
 
-import com.example.ucemap.repository.modelo.Informacion;
+import com.example.ucemap.repository.modelo.InformacionGeneral;
 
 public class InformacionHolder {
     private static InformacionHolder instanciaUnica;
@@ -8,7 +8,7 @@ public class InformacionHolder {
     private static String tipoAtributoAsociado;
 
     private static String nombreEntidadAsociada;
-    private static Informacion informacion;
+    private static InformacionGeneral informacion;
     private static boolean informacionInicializada = false;
     private InformacionHolder() {}
     public static InformacionHolder obtenerInstancia() {
@@ -50,11 +50,11 @@ public class InformacionHolder {
         InformacionHolder.nombreEntidadAsociada = nombreEntidadAsociada;
     }
 
-    public static Informacion getInformacion() {
+    public static InformacionGeneral getInformacion() {
         return informacion;
     }
 
-    public static void setInformacion(Informacion informacion) {
+    public static void setInformacion(InformacionGeneral informacion) {
         InformacionHolder.informacion = informacion;
     }
 

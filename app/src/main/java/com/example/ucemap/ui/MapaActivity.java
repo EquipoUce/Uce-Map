@@ -18,11 +18,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.ucemap.R;
-import com.example.ucemap.data.DatosJason;
 import com.example.ucemap.data.Rutas.HttpUtils;
 import com.example.ucemap.repository.modelo.Posicion;
 import com.example.ucemap.service.informacionFactory.IInformacionFactory;
-import com.example.ucemap.repository.modelo.Informacion;
+import com.example.ucemap.repository.modelo.InformacionGeneral;
 import com.example.ucemap.service.informacionFactory.InformacionFactory;
 import com.example.ucemap.service.informacionSingleton.InformacionHolder;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -52,8 +51,9 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private Button botonGenerarCamino;
     private Button botonDetalles;
+    private Button botonInformacion;
     private Intent intent;
-    private Informacion informacion;
+    private InformacionGeneral informacion;
     private Posicion posicion;
 
     //Variables para implementar el mapa.
@@ -79,11 +79,12 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         botonGenerarCamino = findViewById(R.id.bottonCamino);
         botonDetalles = findViewById(R.id.bottonDetalles);
+        botonInformacion = findViewById(R.id.bottonInformacion);
 
         //iniciar las variables para el mapa
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(MapaActivity.this);
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.idMapaG);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.idMapaGeneral);
         mapFragment.getMapAsync(this);
         // fin bloque inicializacion de variables
 
@@ -128,7 +129,16 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         botonDetalles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(MapaActivity.this, DetallesActivity.class);
+                intent = new Intent(MapaActivity.this, ListaEntradasActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        botonInformacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(MapaActivity.this, InformacionActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -153,7 +163,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
                     public void onSuccess(Location location) {
                         if(location != null) {
                             currentLocation = location;
-                            SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.idMapaG);
+                            SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.idMapaGeneral);
                             mapFragment.getMapAsync(MapaActivity.this);
                         }
                     }
@@ -165,7 +175,6 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
             Toast.makeText(this, "El GPS no está habilitado", Toast.LENGTH_SHORT).show();
         }
 
-
     }
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -176,7 +185,6 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
             }else{
                 Toast.makeText(this,"Locacion nenegada, active los permisos" , Toast.LENGTH_SHORT).show();
             }
-
         }
     }
 

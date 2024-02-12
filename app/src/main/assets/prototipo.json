@@ -1,53 +1,99 @@
 {
     "edificios":[
         {
-            "nombre": "Hospital del Dia",
+            "nombre": "Hospital del Día",
             "servicios": [
-                "Optica",
-                "Atencion Medica Diversas Especialidades",
+                "Óptica",
+                "Atención médica a diversas especialidades",
                 "Farmacia"
             ],
             "imagenes": [
-                "https://images.unsplash.com/photo-1532581291347-9c39cf10a73c?w=1080","https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1080"
+                "https://drive.google.com/file/d/1IPFtKj07HyGMsdBUWRu8dTAB5IoK_JqM/view?usp=drive_link",
+                "https://drive.google.com/file/d/1Te8qo6MMluXFDpmscMurbolwQH859OZO/view?usp=drive_link"
             ],
-            "descripcion": "Parte trasera del edifico Centro de Infomacion Integral, ademas es rojo con blanco",
+            "informacion": "Edificio rojo con blanco",
+            "descripcion":[
+                "1. Acceso más cercana es por la entrada numero #",
+                "2. Ubicada en las calles Jeronimo Leiton y Gilberto Gato Sobral",
+                "3. Se camina aproximadamente 500 metros hacia el sur de manera recta",
+                "4. Se obsevará hacia la derecha un edificio rojo con blanco"
+
+            ],
             "latitud": -0.199490,
             "longitud":-78.505993
         },
         {
-            "nombre": "Vinculacion para la sociedad",
+            "nombre": "Vinculación para la sociedad",
             "servicios": ["Oficinas"],
             "imagenes": [
-                "https://images.unsplash.com/photo-1532581291347-9c39cf10a73c?w=1080","https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1080"
+                "https://images.unsplash.com/photo-1532581291347-9c39cf10a73c?w=1080",
+                "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1080"
             ],
-            "descripcion": "Al frente de unas de las entradas de la Av. Bolivia y cercano a la facultad de comunicacion",
+            "informacion": "Edificio de color azul con blanco",
+            "descripcion":[
+                "1. Acceso más cercana es por la entrada numero #",
+                "2. Ubicada en la calle Bolivia y Eustogio Salgado, en caso de estar cerrada",
+                "3. Segundo acceso cercano es por la entrada numero #",
+                "4. Ubicada en la calle Bolivia",
+                "5. Se camina aproximadamente 200 metros hacia el este de manera recta",
+                "6. Se girará hacia la izquierda en la intersección",
+                "7. Se camina aproximadamente 60 metros hacia el norte de manera recta",
+                "8. Se obsevará hacia la izquierda una interseccion",
+                "9. Se camina aproximadamente 300 metros hacia el norte de manera recta",
+                "10. Se girará hacia la izquierda en la intersección",
+                "11. Se camina aproximadamente 60 metros hacia el sur",
+                "12. Se ingresa en la interseccion hacia la derecha",
+                "13. Se camina aproximadamente 150 metros hacia el oeste de manera recta",
+                "14. Se ingresa en la interseccion hacia la derecha",
+                "15. Se camina aproximadamente 50 metros hacia el sur",
+                "16. Se girará hacia la izquierda en la intersección",
+                "17. Finalmente, se camina aproximadamente 150 metros hacia el sur",
+                "18. Se obsevará hacia la derecha el edificio"
+            ],
             "latitud": -0.200895,
             "longitud":-78.508225
         },
         {
-            "nombre": "Direccion de Posgrados",
+            "nombre": "Dirección de Posgrados",
             "servicios": ["Oficinas"],
             "imagenes": [
-                "https://images.unsplash.com/photo-1532581291347-9c39cf10a73c?w=1080","https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1080"
+                "https://drive.google.com/file/d/13o7g0z8b0vuRRUUdck1Z4s1_bNhUoG7-/view?usp=drive_link",
+                "https://drive.google.com/file/d/1NN6vyBWZqWBMpgBkfpZlN2oJfmRsvxdj/view?usp=drive_link"
             ],
-            "descripcion": "-----",
-            "latitud": 0,
-            "longitud":0
+            "informacion": "-------------------",
+            "descripcion":[
+                "1. Acceso más cercana es por la entrada numero #",
+                "2. Ubicada en las calles Jeronimo Leiton y Gilberto Gato Sobral",
+                "3. Se camina aproximadamente 350 metros hacia el sur de manera recta",
+                "4. Se obsevará hacia la derecha una interseccion",
+                "5. Se sube aproximadamente 50 metros hacia el oeste",
+                "6. Se obsevará hacia la izquierda una interseccion",
+                "7. Se sube aproximadamente 400 metros"
+            ],
+            "latitud": -0.199739,
+            "longitud": -78.507086
         }
 
     ],
 
     "facultades":[
         {
-            "nombre": "Facultad de Ingenieria Quimica",
+            "nombre": "Facultad de Ingeniería Química",
             "servicios": [
-                "Ingenieria Quimica",
+                "Ingeniería Química",
                 "Ingenieria en Bioprocesos"
             ],
             "imagenes": [
-                "https://images.unsplash.com/photo-1532581291347-9c39cf10a73c?w=1080","https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1080"
+                "https://drive.google.com/file/d/1f9B5aRZ4PpSay7jA3nvye1m7E_4dfXE-/view?usp=drive_link",
+                "https://drive.google.com/file/d/1Y_WpuRHR018j1gLehp4NcUWP0DhZo8O3/view?usp=drive_link",
+                "https://drive.google.com/file/d/1DDlqj2n--ixdzQBKmF6eIReKEGa73T9U/view?usp=drive_link"
             ],
-            "descripcion": "Cercano a dos entradas en las calles, edificio blanco con azul, entre dos canchas de basquet",
+            "informacion": "-------------------",
+            "descripcion":[
+                "1. Ubicacion",
+                "2. Ubicacion",
+                "3. Ubicacion"
+            ],
             "latitud": -0.200207,
             "longitud":-78.509893
         },
@@ -55,9 +101,15 @@
             "nombre": "Facultad de Medicina Veterinaria y Zootecnia",
             "servicios": ["Medicina Veterinaria y Zootecnia"],
             "imagenes": [
-                "https://images.unsplash.com/photo-1532581291347-9c39cf10a73c?w=1080","https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1080"
+                "https://drive.google.com/file/d/1ZVFxeEyhVu1r8YNRapVaEOVGELbuFctQ/view?usp=drive_link",
+                "https://drive.google.com/file/d/1few5Q9KDZQxNaVsVuGnudbbFAYypxaU3/view?usp=drive_link"
             ],
-            "descripcion": "Cercano a la entrada en las calle Gilberto Gato Sobral, edificio blanco verdoso con una cancha de basquet",
+            "informacion": "-------------------",
+            "descripcion":[
+                "1. Ubicacion",
+                "2. Ubicacion",
+                "3. Ubicacion"
+            ],
             "latitud": -0.198409,
             "longitud":-78.506292
         },
@@ -65,34 +117,55 @@
             "nombre": "Facultad de Arquitectura y Urbanismo",
             "servicios": ["Arquitectura y Urbanismo"],
             "imagenes": [
-                "https://images.unsplash.com/photo-1532581291347-9c39cf10a73c?w=1080","https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1080"
+                "https://drive.google.com/file/d/13o7g0z8b0vuRRUUdck1Z4s1_bNhUoG7-/view?usp=drive_link",
+                "https://drive.google.com/file/d/1NN6vyBWZqWBMpgBkfpZlN2oJfmRsvxdj/view?usp=drive_link"
             ],
-            "descripcion": "Cercano a la facultad de Ciencias Economicas, edificio con entrada de vidrios y decorado con hierbas",
+            "informacion": "-------------------",
+            "descripcion":[
+                "1. Ubicacion",
+                "2. Ubicacion",
+                "3. Ubicacion"
+            ],
             "latitud": -0.200385,
             "longitud":-78.504496
         },
         {
-            "nombre": "Facultad Jurispredencia, Ciencias Politicas y Sociales",
+            "nombre": "Facultad de Jurisprudencia, Ciencias Políticas y Sociales",
             "servicios": [
                 "Derecho",
-                "Ciencias Politicas"
+                "Ciencias Políticas"
             ],
             "imagenes": [
-                "https://images.unsplash.com/photo-1532581291347-9c39cf10a73c?w=1080","https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1080"
+                "https://drive.google.com/file/d/137lQJ8YKyJS73lrRkkob9FQxObLnBaBR/view?usp=drive_link",
+                "https://drive.google.com/file/d/1aM0dfEoVXhGG6z39oDH8XjoSND82wTMg/view?usp=drive_link",
+                "https://drive.google.com/file/d/1vMsa6vJr1lYQHC0u_YPuMjZph6IRSk1K/view?usp=drive_link",
+                "https://drive.google.com/file/d/1tyhJ8-mZeCMXiVmZ7gypMRaKqRtcaPKC/view?usp=drive_link"
             ],
-            "descripcion": "Se encuentra en la parte trasera del parqueadero de la FCSH, subiendo gradas con edifico blanco con gris",
+            "informacion": "-------------------",
+            "descripcion":[
+                "1. Ubicacion",
+                "2. Ubicacion",
+                "3. Ubicacion"
+            ],
             "latitud": -0.199127,
             "longitud":-78.502317
         },
         {
-            "nombre": "Facultad de Filosofia, Letras y Ciencias de la Educacion de Mecatronica",
-            "servicios": ["Pedagogia Tecnica de la Mecatronica"],
+            "nombre": "Facultad de Filosofía, Letras y Ciencias de la Educación de Mecatrónica",
+            "servicios": ["Pedagogía Técnica de la Mecatrónica"],
             "imagenes": [
-                "https://images.unsplash.com/photo-1532581291347-9c39cf10a73c?w=1080","https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1080"
+                "https://drive.google.com/file/d/1ZGwjWM7AJ9O0Cs6m7q0QdyVnUrs7feu0/view?usp=drive_link"
             ],
-            "descripcion": "Se encuentra subiendo hacia la derecha del Hospital del Dia y al frente edifico de la carrera de Multilingue",
+            "informacion": "-------------------",
+            "descripcion":[
+                "1. Ubicacion",
+                "2. Ubicacion",
+                "3. Ubicacion"
+            ],
             "latitud": -0.199825,
             "longitud":-78.508213
         }
     ]
+
+
 }

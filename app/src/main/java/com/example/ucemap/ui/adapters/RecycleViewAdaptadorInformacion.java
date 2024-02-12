@@ -13,7 +13,7 @@ import com.example.ucemap.repository.modelo.Descripcion;
 
 import java.util.List;
 
-public class RecycleViewAdaptadorListaDetalles extends RecyclerView.Adapter<RecycleViewAdaptadorListaDetalles.ViewHolder> {
+public class RecycleViewAdaptadorInformacion extends RecyclerView.Adapter<RecycleViewAdaptadorInformacion.ViewHolder> {
 
     public List<Descripcion> listaDetallerEntidad;
     private Context context;
@@ -30,14 +30,14 @@ public class RecycleViewAdaptadorListaDetalles extends RecyclerView.Adapter<Recy
         }
     }
 
-    public RecycleViewAdaptadorListaDetalles(Context context, List<Descripcion> descripciones) {
+    public RecycleViewAdaptadorInformacion(Context context, List<Descripcion> descripciones) {
         this.context = context;
         this.listaDetallerEntidad = descripciones;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_detalles, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_informacion, parent, false);
         return new ViewHolder(view);
     }
 

@@ -7,8 +7,7 @@ public class Descripcion{
     public String titulo;
     public String descripcion;
 
-    public Descripcion(String nombre, Descripcion edificioNombre) {
-    }
+
     public Descripcion(String titulo, String descripcion) {
         this.titulo = titulo;
         this.descripcion = descripcion;

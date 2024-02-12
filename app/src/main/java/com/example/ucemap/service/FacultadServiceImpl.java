@@ -6,7 +6,7 @@ import com.example.ucemap.repository.FacultadRepositoryImpl;
 import com.example.ucemap.repository.IFacultadRepository;
 import com.example.ucemap.repository.modelo.Descripcion;
 import com.example.ucemap.repository.modelo.Facultad;
-import com.example.ucemap.repository.modelo.ListaOpciones;
+import com.example.ucemap.repository.modelo.OpcionEscogida;
 import com.example.ucemap.repository.modelo.Posicion;
 import com.example.ucemap.utilidades.FuncionesAdicionales;
 
@@ -26,7 +26,7 @@ public class FacultadServiceImpl implements IFacultadService {
     }
 
     @Override
-    public List<ListaOpciones> buscarTodasLasFacultadPorNombre(Context context) throws JSONException, IOException {
+    public List<OpcionEscogida> buscarTodasLasFacultadPorNombre(Context context) throws JSONException, IOException {
         iFacultadRepository = new FacultadRepositoryImpl();
         return iFacultadRepository.seleccionarTodasLasFacultadPorNombre(context);
     }
@@ -38,7 +38,7 @@ public class FacultadServiceImpl implements IFacultadService {
         Descripcion l1 = new Descripcion("Nombre",nombreFacultad );
         String servicios = FuncionesAdicionales.agregarViñetas(facultad.getServicios());
         Descripcion l2 = new Descripcion("Servicios", servicios);
-        String descripcionFacultad = FuncionesAdicionales.agregarUnaViñetas(facultad.getDescripcion());
+        String descripcionFacultad = FuncionesAdicionales.agregarUnaViñetas(facultad.getInformacion());
         Descripcion l3 = new Descripcion("Descripcion",descripcionFacultad);
         listaDescripcions.add(l1);
         listaDescripcions.add(l2);

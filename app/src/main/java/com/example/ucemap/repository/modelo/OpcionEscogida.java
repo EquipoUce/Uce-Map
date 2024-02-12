@@ -1,21 +1,17 @@
 package com.example.ucemap.repository.modelo;
 
-public class ListaOpciones {
+public class OpcionEscogida {
         public String opcion;
-
-        public ListaOpciones() {
+        public OpcionEscogida() {
             this.opcion = opcion;
         }
-        public ListaOpciones(String opcion) {
+        public OpcionEscogida(String opcion) {
             this.opcion = opcion;
         }
-
         public String getOpcion() {
             return opcion;
         }
-
         public void setOpcion(String opcion) {
             this.opcion = opcion;
         }
-
 }

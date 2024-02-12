@@ -4,18 +4,19 @@ import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
 
 import java.util.List;
 
-public class Informacion {
+public class InformacionGeneral {
     private Posicion posicion;
     private List<Descripcion> descripcion;
     private List<CarouselItem> imagenes;
+    private List<String> detalleEntradas;
 
-    public Informacion() {
+    public InformacionGeneral() {
     }
-
-    public Informacion(Posicion posicion, List<Descripcion> descripcion, List<CarouselItem> imagenes) {
+    public InformacionGeneral(Posicion posicion, List<Descripcion> descripcion, List<CarouselItem> imagenes, List <String> detalleEntradas) {
         this.posicion = posicion;
         this.descripcion = descripcion;
         this.imagenes = imagenes;
+        this.detalleEntradas = detalleEntradas;
     }
 
     public Posicion getPosicion() {
@@ -40,6 +41,14 @@ public class Informacion {
 
     public void setImagenes(List<CarouselItem> imagenes) {
         this.imagenes = imagenes;
+    }
+
+    public List<String> getDetalleEntradas() {
+        return detalleEntradas;
+    }
+
+    public void setDetalleEntradas(List<String> detalleEntradas) {
+        this.detalleEntradas = detalleEntradas;
     }
 }
 

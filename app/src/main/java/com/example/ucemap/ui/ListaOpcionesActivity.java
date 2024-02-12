@@ -4,20 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ucemap.R;
-import com.example.ucemap.data.DatosJason;
-import com.example.ucemap.repository.modelo.ListaOpciones;
+import com.example.ucemap.repository.modelo.OpcionEscogida;
 import com.example.ucemap.service.informacionSingleton.InformacionHolder;
 import com.example.ucemap.service.listaOpcionesFactory.IListaOpcionesFactory;
 import com.example.ucemap.service.listaOpcionesFactory.ListaOpcionesFactory;
-import com.example.ucemap.ui.adapters.RecycleViewAdaptadorListaOpciones;
+import com.example.ucemap.ui.adapters.RecycleViewAdaptadorListaOpcionesEscogidas;
 
 import org.json.JSONException;
 
@@ -27,8 +24,8 @@ import java.util.List;
 public class ListaOpcionesActivity extends AppCompatActivity {
 
     private RecyclerView recyclerViewListaOpciones;
-    private RecycleViewAdaptadorListaOpciones adaptadorOpciones;
-    private List<ListaOpciones> listaOpciones;
+    private RecycleViewAdaptadorListaOpcionesEscogidas adaptadorOpciones;
+    private List<OpcionEscogida> listaOpciones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +61,7 @@ public class ListaOpcionesActivity extends AppCompatActivity {
         //Cargamos el Recycle con el nombre de las entidades escogidas
         recyclerViewListaOpciones = (RecyclerView) findViewById(R.id.recycleOpciones);
         recyclerViewListaOpciones.setLayoutManager(new LinearLayoutManager(this));
-        adaptadorOpciones = new RecycleViewAdaptadorListaOpciones(this, listaOpciones);
+        adaptadorOpciones = new RecycleViewAdaptadorListaOpcionesEscogidas(this, listaOpciones);
         recyclerViewListaOpciones.setAdapter(adaptadorOpciones);
 
         recyclerViewListaOpciones.setPadding(

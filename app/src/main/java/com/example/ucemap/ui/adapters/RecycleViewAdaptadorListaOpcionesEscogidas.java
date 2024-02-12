@@ -13,13 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ucemap.R;
 import com.example.ucemap.service.informacionSingleton.InformacionHolder;
 import com.example.ucemap.ui.MapaActivity;
-import com.example.ucemap.repository.modelo.ListaOpciones;
-import com.example.ucemap.utilidades.FuncionesAdicionales;
+import com.example.ucemap.repository.modelo.OpcionEscogida;
 
 import java.util.List;
 
-public class RecycleViewAdaptadorListaOpciones extends RecyclerView.Adapter<RecycleViewAdaptadorListaOpciones.ViewHolder> {
-    public List<ListaOpciones> listaOpcioneModelos;
+public class RecycleViewAdaptadorListaOpcionesEscogidas extends RecyclerView.Adapter<RecycleViewAdaptadorListaOpcionesEscogidas.ViewHolder> {
+    public List<OpcionEscogida> listaOpcioneModelos;
     private OnItemClickListener listener;
     private Intent intent;
     private Context context;
@@ -41,14 +40,14 @@ public class RecycleViewAdaptadorListaOpciones extends RecyclerView.Adapter<Recy
         }
     }
 
-    public RecycleViewAdaptadorListaOpciones(Context context, List<ListaOpciones> opciones) {
+    public RecycleViewAdaptadorListaOpcionesEscogidas(Context context, List<OpcionEscogida> opciones) {
         this.context = context;
         this.listaOpcioneModelos = opciones;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_opcion, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_opcion_escogida, parent, false);
         return new ViewHolder(view);
     }
 

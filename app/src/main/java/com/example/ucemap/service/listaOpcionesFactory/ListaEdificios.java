@@ -2,7 +2,7 @@ package com.example.ucemap.service.listaOpcionesFactory;
 
 import android.content.Context;
 
-import com.example.ucemap.repository.modelo.ListaOpciones;
+import com.example.ucemap.repository.modelo.OpcionEscogida;
 import com.example.ucemap.service.EdificioServiceImpl;
 import com.example.ucemap.service.IEdificioService;
 
@@ -15,7 +15,7 @@ public class ListaEdificios implements IListaOpcionesFactory{
     
     private IEdificioService iEdificioService;
     @Override
-    public List<ListaOpciones> crearListaOpciones(Context context) throws JSONException, IOException {
+    public List<OpcionEscogida> crearListaOpciones(Context context) throws JSONException, IOException {
         iEdificioService = new EdificioServiceImpl();
         return iEdificioService.buscarTodasLosEdificiosPorNombre(context);
     }

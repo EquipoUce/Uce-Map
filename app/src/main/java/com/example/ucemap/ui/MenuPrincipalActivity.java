@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.content.Intent;
 
 import com.example.ucemap.R;
-import com.example.ucemap.data.DatosJason;
+import com.example.ucemap.data.jason.DatosJason;
 import com.example.ucemap.service.informacionSingleton.InformacionHolder;
 import com.example.ucemap.utilidades.FuncionesAdicionales;
 
@@ -31,7 +31,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             public void onClick(View view) {
                 intent = new Intent(MenuPrincipalActivity.this, ListaOpcionesActivity.class);
                 tituloLayout = "Escoge una Facultad";
-                InformacionHolder.setTipoEntidadAsociada(DatosJason.FACULTAD_NOMBRE_DOCUMENTO_INTERNO);
+                InformacionHolder.setTipoEntidadAsociada(DatosJason.DOCUMENTOS_INTERNOS[0]);
                 InformacionHolder.setTipoAtributoAsociado(DatosJason.ATRIBUTO_GENERAL_NOMBRE);
                 startActivity(intent);
                 finish();
@@ -43,7 +43,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             public void onClick(View view) {
                 intent = new Intent(MenuPrincipalActivity.this, ListaOpcionesActivity.class);
                 tituloLayout = "Escoge un Edificio";
-                InformacionHolder.setTipoEntidadAsociada(DatosJason.EDIFICIO_NOMBRE_DOCUMENTO_INTERNO);
+                InformacionHolder.setTipoEntidadAsociada(DatosJason.DOCUMENTOS_INTERNOS[1]);
                 InformacionHolder.setTipoAtributoAsociado(DatosJason.ATRIBUTO_GENERAL_NOMBRE);
                 startActivity(intent);
                 finish();
