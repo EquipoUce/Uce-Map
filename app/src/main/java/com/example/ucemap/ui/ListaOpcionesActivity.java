@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ucemap.R;
@@ -37,6 +38,17 @@ public class ListaOpcionesActivity extends AppCompatActivity {
         // Atualizar titulo de Layout dependiendo del documento escogido
         TextView tipoListaOpciones = findViewById(R.id.tipoListaOpciones);
         tipoListaOpciones.setText(MenuPrincipalActivity.tituloLayout);
+
+        ImageView imageView = findViewById(R.id.imagenEdificios);
+        if(InformacionHolder.getTipoEntidadAsociada().equalsIgnoreCase("facultades")){
+            imageView.setImageResource(R.drawable.facultades);
+        }
+        else if (InformacionHolder.getTipoEntidadAsociada().equalsIgnoreCase("edificios")){
+            imageView.setImageResource(R.drawable.edificios);
+        }
+        else{
+            imageView.setImageResource(R.drawable.arquitectura_edificios);
+        }
 
         //Creamos la lista de Opciones
         IListaOpcionesFactory iListaOpcionesFactory = ListaOpcionesFactory.generarListaOpciones(InformacionHolder.getTipoEntidadAsociada());

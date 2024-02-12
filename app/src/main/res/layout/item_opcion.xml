@@ -2,18 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
+
     android:layout_margin="5dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        app:cardBackgroundColor="#00FFFFFF">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/fondo_tipografia"
+            android:background="@drawable/fondo_tipografia_2"
             android:orientation="horizontal">
 
             <ImageView
@@ -21,7 +24,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@android:color/transparent"
-                android:src="@drawable/navigate_next_black_24dp" />
+                android:src="@drawable/navigate_next_white_24dp" />
 
             <LinearLayout
                 android:layout_width="0dp"

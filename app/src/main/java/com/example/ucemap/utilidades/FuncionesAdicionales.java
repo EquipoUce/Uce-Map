@@ -33,6 +33,11 @@ public class FuncionesAdicionales {
 
         return resultado.toString();
     }
+    public static String agregarUnaViñetas(String string) {
+        StringBuilder resultado = new StringBuilder();
+            resultado.append("• ").append(string).append("\n");
+        return resultado.toString();
+    }
 
     public static int obtenerAlturaBarraNavegacion(Context context) {
         int alturaBarraNavegacion = 0;

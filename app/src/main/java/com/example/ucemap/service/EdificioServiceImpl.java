@@ -33,10 +33,12 @@ public class EdificioServiceImpl implements IEdificioService {
     @Override
     public List<Descripcion> generarDescripcionEdificio(Edificio edificio){
         List<Descripcion> listaDescripcions = new ArrayList<>();
-        Descripcion l1 = new Descripcion("Nombre", edificio.getNombre());
+        String nombreEdificio = FuncionesAdicionales.agregarUnaViñetas(edificio.getNombre());
+        Descripcion l1 = new Descripcion("Nombre",nombreEdificio);
         String servicios = FuncionesAdicionales.agregarViñetas(edificio.getServicios());
         Descripcion l2 = new Descripcion("Servicios", servicios);
-        Descripcion l3 = new Descripcion("Descripcion",edificio.getDescripcion());
+        String descripcionEdificio= FuncionesAdicionales.agregarUnaViñetas(edificio.getDescripcion());
+        Descripcion l3 = new Descripcion("Descripcion",descripcionEdificio);
         listaDescripcions.add(l1);
         listaDescripcions.add(l2);
         listaDescripcions.add(l3);

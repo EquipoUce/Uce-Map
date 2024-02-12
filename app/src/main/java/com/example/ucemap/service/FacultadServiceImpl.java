@@ -34,10 +34,12 @@ public class FacultadServiceImpl implements IFacultadService {
     @Override
     public List<Descripcion> crearDescripcionFacultad(Facultad facultad){
         List<Descripcion> listaDescripcions = new ArrayList<>();
-        Descripcion l1 = new Descripcion("Nombre", facultad.getNombre());
+        String nombreFacultad = FuncionesAdicionales.agregarUnaViñetas(facultad.getNombre());
+        Descripcion l1 = new Descripcion("Nombre",nombreFacultad );
         String servicios = FuncionesAdicionales.agregarViñetas(facultad.getServicios());
         Descripcion l2 = new Descripcion("Servicios", servicios);
-        Descripcion l3 = new Descripcion("Descripcion",facultad.getDescripcion());
+        String descripcionFacultad = FuncionesAdicionales.agregarUnaViñetas(facultad.getDescripcion());
+        Descripcion l3 = new Descripcion("Descripcion",descripcionFacultad);
         listaDescripcions.add(l1);
         listaDescripcions.add(l2);
         listaDescripcions.add(l3);
