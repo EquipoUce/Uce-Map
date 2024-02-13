@@ -28,6 +28,7 @@ import com.example.ucemap.repository.modelo.InformacionGeneral;
 import com.example.ucemap.service.informacionFactory.InformacionFactory;
 import com.example.ucemap.service.informacionSingleton.EntradasHolder;
 import com.example.ucemap.service.informacionSingleton.InformacionHolder;
+import com.example.ucemap.utilidades.InstruccionesPorVoz;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -123,7 +124,6 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         botonGenerarCamino.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 MapaActivity.this.validar =true;
                 getLastLocation();
                 new GetRouteTask().execute(origenLL,destinoLL);
@@ -152,8 +152,6 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         entradasPosicion = EntradasHolder.getEntradasPosiciones();
         //-------------------------------------------------------------------------------------------
 
-
-
         //-------------------------------------------------------------------------------------------
 
         //-------------------------------------------------------------------------------------------
@@ -162,7 +160,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
             public void onClick(View view) {
                 intent = new Intent(MapaActivity.this, ListaEntradasActivity.class);
                 startActivity(intent);
-                finish();
+                //finish();
             }
         });
 
@@ -237,16 +235,12 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
         if(validar){
             origenLL = new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude());
-            origen = mapa.addMarker(new MarkerOptions().title("POCISION ORIGINAL")
+            origen = mapa.addMarker(new MarkerOptions().title("POCISION ACTUAL")
                             .position(origenLL)
-                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE))
                     //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_posicion_actual))
 
             );
             origen.setTag(0);
-            //mapa.moveCamera(CameraUpdateFactory.newLatLng(universidad));
-            //mapa.moveCamera(CameraUpdateFactory.newLatLng(estadio));
-            //mapa.setOnMarkerClickListener(this);
         }
         destinoLL = new LatLng(posicion.getLatitud(),posicion.getLongitud());
         destino = mapa.addMarker(new MarkerOptions()
@@ -316,13 +310,11 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         private void drawRoute(List<LatLng> routeCoordinates) {
             PolylineOptions polylineOptions = new PolylineOptions()
                     .addAll(routeCoordinates)
-                    .width(9)
-                    .color(Color.GREEN);
+                    .width(10)
+                    .color(Color.BLUE);
 
             Polyline polyline = mapa.addPolyline(polylineOptions);
-            mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(routeCoordinates.get(0), 12));
+            mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(routeCoordinates.get(0), 15));
         }
     }
-
-
 }

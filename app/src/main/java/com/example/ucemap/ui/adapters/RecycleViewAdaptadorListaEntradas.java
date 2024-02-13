@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ucemap.R;
 import com.example.ucemap.repository.modelo.OpcionEscogida;
 import com.example.ucemap.service.informacionSingleton.InformacionHolder;
-import com.example.ucemap.ui.MapaActivity;
+import com.example.ucemap.utilidades.InstruccionesPorVoz;
 
 import java.util.List;
 
@@ -22,6 +22,7 @@ public class RecycleViewAdaptadorListaEntradas extends RecyclerView.Adapter<Recy
     private OnItemClickListener listener;
     private Intent intent;
     private Context context;
+    public InstruccionesPorVoz voz;
 
     public interface OnItemClickListener {
         void onItemClick(int position);
@@ -38,10 +39,10 @@ public class RecycleViewAdaptadorListaEntradas extends RecyclerView.Adapter<Recy
             opcion = itemView.findViewById(R.id.textOpcion);
         }
     }
-
     public RecycleViewAdaptadorListaEntradas(Context context, List<String> opciones) {
         this.context = context;
         this.listaOpcioneModelos = opciones;
+        this.voz = new InstruccionesPorVoz(context);
     }
 
     @Override
@@ -63,8 +64,7 @@ public class RecycleViewAdaptadorListaEntradas extends RecyclerView.Adapter<Recy
 
                 //Implemente Audio Aqui
                 //----------------------------------------------------------------------------
-
-
+                voz.speak(opcionEscogida);
                 //---------------------------------------------------------------------
 
             }
