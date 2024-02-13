@@ -1,14 +1,18 @@
 package com.example.ucemap.repository.modelo;
 
 public class Posicion {
-    private String nombre;
+    private String identificador;
     private Double latitud;
     private Double longitud;
 
-    public Posicion(String nombre, Double latitud, Double longitud) {
+    public static final String[] ENTRADAS_ATRIBUTOS_JASON = new String[]{"identificador","latitud","longitud"};
+    public Posicion() {
+    }
+
+    public Posicion(String identificador, Double latitud, Double longitud) {
         this.latitud = latitud;
         this.longitud = longitud;
-        this.nombre = nombre;
+        this.identificador = identificador;
     }
 
     public Double getLatitud() {
@@ -27,12 +31,12 @@ public class Posicion {
         this.longitud = longitud;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getIdentificador() {
+        return identificador;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setIdentificador(String identificador) {
+        this.identificador = identificador;
     }
 
     @Override

@@ -29,8 +29,8 @@ public class EdificioRepositoryImpl implements IEdificioRepository {
                 edificio.setNombre(Object.getString(Edificio.EDIFICIO_ATRIBUTOS_JASON[0]));
                 edificio.setServicios(DatosJason.extraerListaString(Object,Edificio.EDIFICIO_ATRIBUTOS_JASON[1]));
                 edificio.setImagenes(DatosJason.extraerListaString(Object,Edificio.EDIFICIO_ATRIBUTOS_JASON[2]));
-                edificio.setDetallesEntradas(DatosJason.extraerListaString(Object,Edificio.EDIFICIO_ATRIBUTOS_JASON[3]));
-                edificio.setInformacion(Object.getString( Edificio.EDIFICIO_ATRIBUTOS_JASON[4]));
+                edificio.setInformacion(Object.getString( Edificio.EDIFICIO_ATRIBUTOS_JASON[3]));
+                edificio.setDetallesEntradas(DatosJason.extraerListaString(Object,Edificio.EDIFICIO_ATRIBUTOS_JASON[4]));
                 edificio.setLatitud(Object.getDouble( Edificio.EDIFICIO_ATRIBUTOS_JASON[5]));
                 edificio.setLongitud(Object.getDouble( Edificio.EDIFICIO_ATRIBUTOS_JASON[6]));
                 Log.d("Objeto Edificio", edificio.toString());

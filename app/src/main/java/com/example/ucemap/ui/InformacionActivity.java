@@ -41,7 +41,7 @@ public class InformacionActivity extends AppCompatActivity {
         carousel.setData(listaImagenes);
 
         //Cargamos el Recycle Con los detalles de la Entidad Escogida
-        recyclerViewListaOpciones = (RecyclerView) findViewById(R.id.recycleDetalles);
+        recyclerViewListaOpciones = (RecyclerView) findViewById(R.id.recycleInformacion);
         recyclerViewListaOpciones.setLayoutManager(new LinearLayoutManager(this));
         adaptadorOpciones = new RecycleViewAdaptadorInformacion(this, listaOpciones);
         recyclerViewListaOpciones.setAdapter(adaptadorOpciones);

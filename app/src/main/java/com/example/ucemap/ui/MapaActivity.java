@@ -7,6 +7,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,9 +21,12 @@ import androidx.core.app.ActivityCompat;
 import com.example.ucemap.R;
 import com.example.ucemap.data.Rutas.HttpUtils;
 import com.example.ucemap.repository.modelo.Posicion;
+import com.example.ucemap.service.EntradaServiceImpl;
+import com.example.ucemap.service.IEntradaService;
 import com.example.ucemap.service.informacionFactory.IInformacionFactory;
 import com.example.ucemap.repository.modelo.InformacionGeneral;
 import com.example.ucemap.service.informacionFactory.InformacionFactory;
+import com.example.ucemap.service.informacionSingleton.EntradasHolder;
 import com.example.ucemap.service.informacionSingleton.InformacionHolder;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -55,6 +59,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
     private Intent intent;
     private InformacionGeneral informacion;
     private Posicion posicion;
+    private List<Posicion> entradasPosicion;
 
     //Variables para implementar el mapa.
     GoogleMap mapa;
@@ -91,6 +96,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         //Aplicamos el objeto informacionHolder para extraer la informacion que no cambia
         InformacionHolder informacionHolder = InformacionHolder.obtenerInstancia();
+        EntradasHolder entradasHolder = EntradasHolder.obtenerInstancia();
 
         //Actualizar titulo de Layout dependiendo de la entidad escogida
         TextView textTiruloMapa = findViewById(R.id.textTituloMapa);
@@ -126,6 +132,31 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
 
         //-------------------------------------------------------------------------------------------
+        //Posiciones de las Entradas
+        if (!EntradasHolder.getInformacionInicializada()) {
+            try {
+
+                IEntradaService iEntradaService =  new EntradaServiceImpl();
+                List<Posicion> tmp = iEntradaService.buscarTodasLasEntradasPorIdentificador(this);
+                EntradasHolder.setEntradasPosiciones(tmp);
+                EntradasHolder.setInformacionInicializada(true);
+                Log.d("Se cargo las posiciones", tmp.toString());
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        //Me tocan mi parte del codigo y los saco del grupo
+        //-------------------------------------------------------------------------------------------
+        entradasPosicion = EntradasHolder.getEntradasPosiciones();
+        //-------------------------------------------------------------------------------------------
+
+
+
+        //-------------------------------------------------------------------------------------------
+
+        //-------------------------------------------------------------------------------------------
         botonDetalles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -134,6 +165,8 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
                 finish();
             }
         });
+
+
 
         botonInformacion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -217,7 +250,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
         destinoLL = new LatLng(posicion.getLatitud(),posicion.getLongitud());
         destino = mapa.addMarker(new MarkerOptions()
-                .title(posicion.getNombre())
+                .title(posicion.getIdentificador())
                 .position(destinoLL)
 
         );

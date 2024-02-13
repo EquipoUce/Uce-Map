@@ -16,7 +16,7 @@ import java.util.List;
 
 public class DatosJason {
     public static final String DIRECTORIO_JASSON= "prototipo.json";
-    public static final String[] DOCUMENTOS_INTERNOS = new String[]{"facultades", "edificios", "entradas"};
+    public static final String[] DOCUMENTOS_INTERNOS = new String[]{"facultades", "edificios", "entrada"};
     public static final String ATRIBUTO_GENERAL_NOMBRE = "nombre";
 
     public static String leerJson(Context context) throws IOException

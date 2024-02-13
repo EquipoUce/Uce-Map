@@ -8,44 +8,44 @@
                 "Farmacia"
             ],
             "imagenes": [
-                "https://drive.google.com/file/d/1IPFtKj07HyGMsdBUWRu8dTAB5IoK_JqM/view?usp=drive_link",
-                "https://drive.google.com/file/d/1Te8qo6MMluXFDpmscMurbolwQH859OZO/view?usp=drive_link"
+                "https://i.postimg.cc/k6tHXqQw/Edificio-Hospital-foto1.jpg",
+                "https://i.postimg.cc/9w5nDK12/Edificio-Hospital-foto2.jpg"
             ],
-            "informacion": "Edificio rojo con blanco",
+            "informacion": "Edificio de con una altura de 6 pisos, su diseño es de cemento, ladrillo y losa. Los colores son amarillo claro, blanco, beige claro, rosa pastel. Está ubicado justo atrás de la biblioteca general universitaria y la facultad de ciencias",
             "descripcion":[
-                "1. Acceso más cercana es por la entrada numero #",
+                "1. Acceso más cercana es por la entrada numero 5",
                 "2. Ubicada en las calles Jeronimo Leiton y Gilberto Gato Sobral",
-                "3. Se camina aproximadamente 500 metros hacia el sur de manera recta",
-                "4. Se obsevará hacia la derecha un edificio rojo con blanco"
-
+                "3. Se camina aproximadamente 500 metros en dirección hacia el sur",
+                "4. Se obsevará hacia la derecha un edificio rojizo con blanco"
             ],
             "latitud": -0.199490,
             "longitud":-78.505993
         },
         {
             "nombre": "Vinculación para la sociedad",
-            "servicios": ["Oficinas"],
+            "servicios": ["Detalles de profesionales y expertos fortalece la formación de los estudiantes, la transmisión de conocimientos y la pertinencia de los programas educativos"],
             "imagenes": [
-                "https://images.unsplash.com/photo-1532581291347-9c39cf10a73c?w=1080",
-                "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1080"
+                "https://i.postimg.cc/5Y91kHLT/Edificio-Vinculacion-foto1.jpg",
+                "https://i.postimg.cc/TLkG8Rcw/Edificio-Vinculacion-foto2.jpg",
+                "https://i.postimg.cc/BPX34dhC/Edificio-Vinculacion-foto3.jpg"
             ],
-            "informacion": "Edificio de color azul con blanco",
+            "informacion": "Edificio de dos pisos, su diseño la mayor parte es de cemento y bloque, sus colores representativos son el beige claro, marrón claro y el amarillo. Se encuentra ubicado entre el colegio menor y la facultad de ciencias psicológicas",
             "descripcion":[
-                "1. Acceso más cercana es por la entrada numero #",
+                "1. Acceso más cercana es por la entrada numero 7",
                 "2. Ubicada en la calle Bolivia y Eustogio Salgado, en caso de estar cerrada",
-                "3. Segundo acceso cercano es por la entrada numero #",
+                "3. Segundo acceso cercano es por la entrada numero 8",
                 "4. Ubicada en la calle Bolivia",
-                "5. Se camina aproximadamente 200 metros hacia el este de manera recta",
+                "5. Se camina aproximadamente 200 metros en dirección hacia el este",
                 "6. Se girará hacia la izquierda en la intersección",
-                "7. Se camina aproximadamente 60 metros hacia el norte de manera recta",
+                "7. Se camina aproximadamente 60 metros en dirección hacia el norte",
                 "8. Se obsevará hacia la izquierda una interseccion",
-                "9. Se camina aproximadamente 300 metros hacia el norte de manera recta",
+                "9. Se camina aproximadamente 300 metros en dirección hacia el norte",
                 "10. Se girará hacia la izquierda en la intersección",
-                "11. Se camina aproximadamente 60 metros hacia el sur",
+                "11. Se camina aproximadamente 60 metros en dirección hacia el sur",
                 "12. Se ingresa en la interseccion hacia la derecha",
-                "13. Se camina aproximadamente 150 metros hacia el oeste de manera recta",
+                "13. Se camina aproximadamente 150 metros en dirección hacia el oeste",
                 "14. Se ingresa en la interseccion hacia la derecha",
-                "15. Se camina aproximadamente 50 metros hacia el sur",
+                "15. Se camina aproximadamente 50 metros en dirección hacia el sur",
                 "16. Se girará hacia la izquierda en la intersección",
                 "17. Finalmente, se camina aproximadamente 150 metros hacia el sur",
                 "18. Se obsevará hacia la derecha el edificio"
@@ -57,16 +57,15 @@
             "nombre": "Dirección de Posgrados",
             "servicios": ["Oficinas"],
             "imagenes": [
-                "https://drive.google.com/file/d/13o7g0z8b0vuRRUUdck1Z4s1_bNhUoG7-/view?usp=drive_link",
-                "https://drive.google.com/file/d/1NN6vyBWZqWBMpgBkfpZlN2oJfmRsvxdj/view?usp=drive_link"
+                "https://i.postimg.cc/MGMs0YsL/Cielo.jpg"
             ],
-            "informacion": "-------------------",
+            "informacion": "abcd",
             "descripcion":[
-                "1. Acceso más cercana es por la entrada numero #",
+                "1. Acceso más cercana es por la entrada numero 5",
                 "2. Ubicada en las calles Jeronimo Leiton y Gilberto Gato Sobral",
-                "3. Se camina aproximadamente 350 metros hacia el sur de manera recta",
+                "3. Se camina aproximadamente 350 metros en dirección hacia el sur",
                 "4. Se obsevará hacia la derecha una interseccion",
-                "5. Se sube aproximadamente 50 metros hacia el oeste",
+                "5. Se sube aproximadamente 50 metros en dirección hacia el oeste",
                 "6. Se obsevará hacia la izquierda una interseccion",
                 "7. Se sube aproximadamente 400 metros"
             ],
@@ -81,18 +80,19 @@
             "nombre": "Facultad de Ingeniería Química",
             "servicios": [
                 "Ingeniería Química",
-                "Ingenieria en Bioprocesos"
+                "Ingeniería en Bioprocesos"
             ],
             "imagenes": [
-                "https://drive.google.com/file/d/1f9B5aRZ4PpSay7jA3nvye1m7E_4dfXE-/view?usp=drive_link",
-                "https://drive.google.com/file/d/1Y_WpuRHR018j1gLehp4NcUWP0DhZo8O3/view?usp=drive_link",
-                "https://drive.google.com/file/d/1DDlqj2n--ixdzQBKmF6eIReKEGa73T9U/view?usp=drive_link"
+                "https://i.postimg.cc/15w3KpcD/Facultad-Ingenieria-quimica-foto1.jpg",
+                "https://i.postimg.cc/FRwhyRYP/Facultad-Ingenieria-quimica-foto2.jpg",
+                "https://i.postimg.cc/k5XM9Lry/Facultad-Ingenieria-quimica-foto3.jpg"
             ],
-            "informacion": "-------------------",
+            "informacion": "Edificios principales respectivamente de 5 y 3 pisos respectivamente, material  de la facultad en su totalidad es de cemento y cuarzo, sus colores representativos son el blanco y el azul. Se encuentra en la parte superior de todo el campus universitario entre el colegio Juan Montalvo y el Colegio Menor",
             "descripcion":[
-                "1. Ubicacion",
-                "2. Ubicacion",
-                "3. Ubicacion"
+                "1. Acceso más cercana es por la entrada numero 6",
+                "2. Ubicado en la calle Enrique Rither",
+                "3. Se camina aproximadamente 400 metros en dirección hacia el este",
+                "4. Se obsevará hacia la derecha un edificio blanco con azul"
             ],
             "latitud": -0.200207,
             "longitud":-78.509893
@@ -101,14 +101,15 @@
             "nombre": "Facultad de Medicina Veterinaria y Zootecnia",
             "servicios": ["Medicina Veterinaria y Zootecnia"],
             "imagenes": [
-                "https://drive.google.com/file/d/1ZVFxeEyhVu1r8YNRapVaEOVGELbuFctQ/view?usp=drive_link",
-                "https://drive.google.com/file/d/1few5Q9KDZQxNaVsVuGnudbbFAYypxaU3/view?usp=drive_link"
+                "https://i.postimg.cc/VvMmD8Mz/Facultad-veterinaria-foto1.jpg",
+                "https://i.postimg.cc/kgw9jwVR/Facultad-veterinaria-foto2.jpg"
             ],
-            "informacion": "-------------------",
+            "informacion": "El edificio principal es de una plata completamente de color blanco, ventanas con rejas oscuras en la parte superior del establecimiento, así como todas las ventanas en la planta baja justo a lado de una cancha de futbol/Básquet. Esta ubicado entre el centro de biología y FIGEMPA (Facultad de ingeniería en geología, minas, petróleos y ambiental)",
             "descripcion":[
-                "1. Ubicacion",
-                "2. Ubicacion",
-                "3. Ubicacion"
+                "1. Acceso más cercana es por la entrada numero 5",
+                "2. Ubicada en las calles Jeronimo Leiton y Gilberto Gato Sobral",
+                "3. Se camina aproximadamente 100 metros en dirección hacia el sur",
+                "4. Se obsevará hacia la derecha un edificio con el nombre de la facultad"
             ],
             "latitud": -0.198409,
             "longitud":-78.506292
@@ -117,14 +118,20 @@
             "nombre": "Facultad de Arquitectura y Urbanismo",
             "servicios": ["Arquitectura y Urbanismo"],
             "imagenes": [
-                "https://drive.google.com/file/d/13o7g0z8b0vuRRUUdck1Z4s1_bNhUoG7-/view?usp=drive_link",
-                "https://drive.google.com/file/d/1NN6vyBWZqWBMpgBkfpZlN2oJfmRsvxdj/view?usp=drive_link"
+                "https://i.postimg.cc/nVKrt4gT/Facultad-Arquitectura-foto1.jpg",
+                "https://i.postimg.cc/BQq6Z8G3/Facultad-Arquitectura-foto2.jpg",
+                "https://i.postimg.cc/5tZyfnfK/Facultad-Arquitectura-foto3.jpg"
             ],
-            "informacion": "-------------------",
+            "informacion": "Primer edificio ubicado en la parte superior trasera pasando el estadio universitario, todo el campus es de una sola planta, su diseño es de bloques en tonalidades grises con columnas beige claro. En la planta baja se encuentra las salas de exposición, biblioteca, bar y el servicio higiénico",
             "descripcion":[
-                "1. Ubicacion",
-                "2. Ubicacion",
-                "3. Ubicacion"
+                "1. Acceso más cercana es por la entrada numero 8",
+                "2. Ubicada en la calle Bolivia",
+                "3. Se camina aproximadamente 200 metros en dirección hacia el este",
+                "4. Se girará hacia la izquierda en la intersección",
+                "5. Se camina aproximadamente 600 metros en dirección hacia el norte",
+                "6. Se obsevará hacia la izquierda una interseccion",
+                "7. Se camina aproximadamente 100 metros en dirección hacia el norte",
+                "8. Se observará unas gradas al lado izquierdo que llevaran hacia la facultad"
             ],
             "latitud": -0.200385,
             "longitud":-78.504496
@@ -136,16 +143,19 @@
                 "Ciencias Políticas"
             ],
             "imagenes": [
-                "https://drive.google.com/file/d/137lQJ8YKyJS73lrRkkob9FQxObLnBaBR/view?usp=drive_link",
-                "https://drive.google.com/file/d/1aM0dfEoVXhGG6z39oDH8XjoSND82wTMg/view?usp=drive_link",
-                "https://drive.google.com/file/d/1vMsa6vJr1lYQHC0u_YPuMjZph6IRSk1K/view?usp=drive_link",
-                "https://drive.google.com/file/d/1tyhJ8-mZeCMXiVmZ7gypMRaKqRtcaPKC/view?usp=drive_link"
+                "https://i.postimg.cc/sXNtkNy1/Facultad-Jurisprudencia-foto1.jpg",
+                "https://i.postimg.cc/gjLfmHks/Facultad-Jurisprudencia-foto2.jpg",
+                "https://i.postimg.cc/zBBsP1s9/Facultad-Jurisprudencia-foto3.jpg",
+                "https://i.postimg.cc/sfBXMFM6/Facultad-Jurisprudencia-foto4.jpg"
             ],
-            "informacion": "-------------------",
+            "informacion": "El edificio principal dispone de 3 pisos de color plateado claro y la planta baja inferior de color blanco y ventanas oscuras. Se encuentra entre la facultad de Ciencias sociales – humanas y la facultad de Comercio y administración",
             "descripcion":[
-                "1. Ubicacion",
-                "2. Ubicacion",
-                "3. Ubicacion"
+                "1. Acceso más cercana es por la entrada numero 3",
+                "2. Ubicada en las calles Gaspar de Carvajal y Gilberto Gato Sobral",
+                "3. Se camina aproximadamente 300 metros en dirección hacia el sur",
+                "4. Se girará hacia la izquierda en la intersección",
+                "5. Se camina aproximadamente 150 metros en dirección hacia el este",
+                "6. Se obsevará hacia la derecha el nombre de la facultad"
             ],
             "latitud": -0.199127,
             "longitud":-78.502317
@@ -154,18 +164,61 @@
             "nombre": "Facultad de Filosofía, Letras y Ciencias de la Educación de Mecatrónica",
             "servicios": ["Pedagogía Técnica de la Mecatrónica"],
             "imagenes": [
-                "https://drive.google.com/file/d/1ZGwjWM7AJ9O0Cs6m7q0QdyVnUrs7feu0/view?usp=drive_link"
+                "https://i.postimg.cc/kX3nD23G/Facultad-mecatronica-foto1.jpg"
             ],
-            "informacion": "-------------------",
+            "informacion": "Los edificios van de 1 a 2 pisos, la mayoría de los establecimientos son de bloques y cemento, Los colores representativos son el blanco y el beige claro con techos de colores verde, Se encuentra ubicado atrás del hospital del día, justamente a lado del colegio Menor",
             "descripcion":[
-                "1. Ubicacion",
-                "2. Ubicacion",
-                "3. Ubicacion"
+                "1. Acceso más cercana es por la entrada numero 5",
+                "2. Ubicado en la calle Enrique Rither",
+                "3. Se camina aproximadamente 750 metros en dirección hacia el este",
+                "4. Se obsevará hacia la derecha casas prefabricadas."
             ],
             "latitud": -0.199825,
             "longitud":-78.508213
         }
-    ]
+    ],
 
+    "entrada":[
+        {
+            "identificador": "1",
+            "latitud": -0.201597,
+            "longitud":-78.501656
+        },
+        {
+            "identificador": "2",
+            "latitud": -0.198965,
+            "longitud":-78.500736
+        },
+        {
+            "identificador": "3",
+            "latitud": -0.19791225,
+            "longitud":-78.502238
+        },
+        {
+            "identificador": "4",
+            "latitud": -0.197239,
+            "longitud":-78.504739
+        },
+        {
+            "identificador": "5",
+            "latitud": -0.197582,
+            "longitud":-78.506152
+        },
+        {
+            "identificador": "6",
+            "latitud": -0.199083,
+            "longitud":-78.511005
+        },
+        {
+            "identificador": "7",
+            "latitud": -0.201346,
+            "longitud":-78.508421
+        },
+        {
+            "identificador": "8",
+            "latitud": -0.201768,
+            "longitud":-78.507460
+        }
+    ]
 
 }

@@ -1,5 +1,6 @@
 package com.example.ucemap.ui;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -28,14 +29,12 @@ public class ListaEntradasActivity extends AppCompatActivity {
     private RecycleViewAdaptadorListaEntradas adaptadorEntradas;
     private List<String> listaOpciones;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lista_opciones);
+        setContentView(R.layout.lista_entrada);
 
-        // Atualizar titulo de Layout dependiendo del documento escogido
-        TextView tipoListaOpciones = findViewById(R.id.tipoListaOpciones);
-        tipoListaOpciones.setText(MenuPrincipalActivity.tituloLayout);
 
         //Implemente Mapa Aqui
         //----------------------------------------------------------------------------
@@ -45,7 +44,7 @@ public class ListaEntradasActivity extends AppCompatActivity {
 
         listaOpciones = InformacionHolder.getInformacion().getDetalleEntradas();
         //Cargamos el Recycle con el nombre de las entidades escogidas
-        recyclerViewListaEntradas = (RecyclerView) findViewById(R.id.recycleOpciones);
+        recyclerViewListaEntradas = (RecyclerView) findViewById(R.id.recycleEntradas);
         recyclerViewListaEntradas.setLayoutManager(new LinearLayoutManager(this));
         adaptadorEntradas = new RecycleViewAdaptadorListaEntradas(this, listaOpciones);
         recyclerViewListaEntradas.setAdapter(adaptadorEntradas);
