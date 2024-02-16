@@ -63,6 +63,7 @@ public class FuncionesAdicionales {
 
         return listaCarouselItem;
     }
+    public static String extraerNumeroString(String cadena){    char ultimoCaracter = cadena.charAt(cadena.length() - 1);return  new String(new char[]{ultimoCaracter});}
 
 
 }

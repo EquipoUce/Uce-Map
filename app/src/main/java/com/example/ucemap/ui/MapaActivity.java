@@ -1,5 +1,6 @@
 package com.example.ucemap.ui;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -19,7 +20,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import com.example.ucemap.R;
-import com.example.ucemap.data.Rutas.HttpUtils;
 import com.example.ucemap.repository.modelo.Posicion;
 import com.example.ucemap.service.EntradaServiceImpl;
 import com.example.ucemap.service.IEntradaService;
@@ -28,9 +28,6 @@ import com.example.ucemap.repository.modelo.InformacionGeneral;
 import com.example.ucemap.service.informacionFactory.InformacionFactory;
 import com.example.ucemap.service.informacionSingleton.EntradasHolder;
 import com.example.ucemap.service.informacionSingleton.InformacionHolder;
-import com.example.ucemap.utilidades.InstruccionesPorVoz;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -48,10 +45,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-
 public class MapaActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private Button botonGenerarCamino;
@@ -64,17 +62,14 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     //Variables para implementar el mapa.
     GoogleMap mapa;
-    private final int FINE_PERMISSION_CODE = 1;
-    private static final int PERMISSION_REQUEST_CODE = 1;
-
-    private LocationManager locationManager;
-    Location currentLocation;
     private Marker destino, origen;
 
-    public FusedLocationProviderClient fusedLocationProviderClient;
-    private boolean validar = false;
-
     private LatLng destinoLL, origenLL;
+
+    private List<LatLng> ruta;
+    private String nombreRuta;
+
+    public static final String DIRECTORIO_JASSON= "rutas.json";
 
 
     @Override
@@ -87,13 +82,8 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         botonDetalles = findViewById(R.id.bottonDetalles);
         botonInformacion = findViewById(R.id.bottonInformacion);
 
-        //iniciar las variables para el mapa
-        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(MapaActivity.this);
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.idMapaGeneral);
         mapFragment.getMapAsync(this);
-        // fin bloque inicializacion de variables
-
 
         //Aplicamos el objeto informacionHolder para extraer la informacion que no cambia
         InformacionHolder informacionHolder = InformacionHolder.obtenerInstancia();
@@ -118,15 +108,21 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
         }
 
+
+        this.nombreRuta = InformacionHolder.getNombreEntidadAsociada();
+        try {
+            ruta = this.coordenadaRuta(this.leerJson(this));
+        } catch (Exception e) {
+            throw new RuntimeException(e.toString());
+        }
         //-------------------------------------------------------------------------------------------
         posicion = InformacionHolder.getInformacion().getPosicion(); //<--- Posicion
         //-------------------------------------------------------------------------------------------
         botonGenerarCamino.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MapaActivity.this.validar =true;
-                getLastLocation();
-                new GetRouteTask().execute(origenLL,destinoLL);
+                Toast.makeText(MapaActivity.this, " "+InformacionHolder.getNombreEntidadAsociada(), Toast.LENGTH_SHORT).show();
+                drawRoute(ruta);
                 //finish();
             }
         });
@@ -183,138 +179,73 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         startActivity(intent);
         finish();
     }
-
-    //METODOS PARA SOLICITAR PERMISOS DEL GPS
-    private void getLastLocation() {
-        if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            if(checkLocationPermission()){
-                Task<Location> task = fusedLocationProviderClient.getLastLocation();
-                task.addOnSuccessListener(new OnSuccessListener<Location>() {
-                    @Override
-                    public void onSuccess(Location location) {
-                        if(location != null) {
-                            currentLocation = location;
-                            SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.idMapaGeneral);
-                            mapFragment.getMapAsync(MapaActivity.this);
-                        }
-                    }
-                });
-            }else{
-                requestLocationPermission();
-            }
-        }else{
-            Toast.makeText(this, "El GPS no está habilitado", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if(requestCode == FINE_PERMISSION_CODE){
-            if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-                getLastLocation();
-            }else{
-                Toast.makeText(this,"Locacion nenegada, active los permisos" , Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
-
-    private boolean checkLocationPermission() {
-        return ActivityCompat.checkSelfPermission(
-                this,Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
-    }
-
-    private void requestLocationPermission() {
-        ActivityCompat.requestPermissions(
-                this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSION_REQUEST_CODE);
-    }
-
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mapa = googleMap;
         googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-        if(validar){
-            origenLL = new LatLng(currentLocation.getLatitude(),currentLocation.getLongitude());
-            origen = mapa.addMarker(new MarkerOptions().title("POCISION ACTUAL")
-                            .position(origenLL)
-                    //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_posicion_actual))
 
-            );
-            origen.setTag(0);
-        }
-        destinoLL = new LatLng(posicion.getLatitud(),posicion.getLongitud());
-        destino = mapa.addMarker(new MarkerOptions()
-                .title(posicion.getIdentificador())
-                .position(destinoLL)
+        origenLL = ruta.get(0);
+        destinoLL = ruta.get(ruta.size()-1);
 
+
+        origen = mapa.addMarker(new MarkerOptions()
+                .title("ESTA AQUI")
+                .position(origenLL)
         );
-        destino.setTag(0);
+        origen.showInfoWindow();
+
+        destino = mapa.addMarker(new MarkerOptions()
+                .title(this.nombreRuta)
+                .position(destinoLL)
+        );
+        //destino.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.baseline_navigate_next_black_24dp));
+        destino.showInfoWindow();
+
 
         mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(destinoLL, (float) 17.5F));
+
+    }
+    @NonNull
+    private List<LatLng> coordenadaRuta(String json) throws Exception {
+        List<LatLng> coordenadas = new ArrayList<>();
+
+        JSONObject jsonO = new JSONObject(json);
+        JSONArray features = jsonO.getJSONArray(this.nombreRuta);
+        if (features.length() > 0) {
+            JSONArray vectorCoordenadas = features.getJSONObject(0)
+                    .getJSONArray("coordenadas");
+
+            for (int i = 0; i < vectorCoordenadas.length(); i++) {
+                JSONArray coordenada = vectorCoordenadas.getJSONArray(i);
+                double latitude = coordenada.getDouble(0);
+                double longitude = coordenada.getDouble(1);
+                coordenadas.add(new LatLng(latitude, longitude));
+            }
+        }
+
+        return coordenadas;
+    }
+    //RUTAS
+    private String leerJson(Context context) throws IOException
+    {
+        BufferedReader reader = null;
+        reader = new BufferedReader(new InputStreamReader(context.getAssets().open(DIRECTORIO_JASSON), "UTF-8"));
+        String content = "";
+        String line;
+        while ((line = reader.readLine()) != null)
+        {
+            content = content + line;
+        }
+        return content;
     }
 
-    //CLASE PRIVADA PARA GENERAR LAS RUTAS
-    private class GetRouteTask extends AsyncTask<LatLng, Void, List<LatLng>> {
+    private void drawRoute(List<LatLng> routeCoordinates) {
+        PolylineOptions polylineOptions = new PolylineOptions()
+                .addAll(routeCoordinates)
+                .width(10)
+                .color(Color.BLUE);
 
-        @Override
-        protected List<LatLng> doInBackground(LatLng... params) {
-            LatLng origin = params[0];
-            LatLng destination = params[1];
-
-            try {
-                String apiKey = "5b3ce3597851110001cf62489857f6ee5a794c3988ae9eed0073a98d";  // Reemplaza con tu clave de API de OpenRouteService
-                String url ="https://api.openrouteservice.org/v2/directions/foot-walking?api_key="+ //"https://api.openrouteservice.org/v2/directions/driving-car?api_key=" en autp
-                        apiKey +
-                        "&start=" + origin.longitude + "," + origin.latitude +
-                        "&end=" + destination.longitude + "," + destination.latitude;
-
-                String response = HttpUtils.sendHttpGetRequest(url);
-
-                // Procesar la respuesta JSON y extraer las coordenadas de la ruta
-                return parseRouteCoordinates(response);
-            } catch (Exception e) {
-                e.printStackTrace();
-                return null;
-            }
-        }
-
-        @Override
-        protected void onPostExecute(List<LatLng> routeCoordinates) {
-            if (routeCoordinates != null) {
-                // Mostrar la ruta en el mapa
-                drawRoute(routeCoordinates);
-            }
-        }
-
-        private List<LatLng> parseRouteCoordinates(String json) throws Exception {
-            List<LatLng> coordinates = new ArrayList<>();
-
-            JSONObject jsonResponse = new JSONObject(json);
-            JSONArray features = jsonResponse.getJSONArray("features");
-            if (features.length() > 0) {
-                JSONArray coordinatesArray = features.getJSONObject(0)
-                        .getJSONObject("geometry")
-                        .getJSONArray("coordinates");
-
-                for (int i = 0; i < coordinatesArray.length(); i++) {
-                    JSONArray coordinate = coordinatesArray.getJSONArray(i);
-                    double latitude = coordinate.getDouble(1);
-                    double longitude = coordinate.getDouble(0);
-                    coordinates.add(new LatLng(latitude, longitude));
-                }
-            }
-
-            return coordinates;
-        }
-
-        private void drawRoute(List<LatLng> routeCoordinates) {
-            PolylineOptions polylineOptions = new PolylineOptions()
-                    .addAll(routeCoordinates)
-                    .width(10)
-                    .color(Color.BLUE);
-
-            Polyline polyline = mapa.addPolyline(polylineOptions);
-            mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(routeCoordinates.get(0), 15));
-        }
+        Polyline polyline = mapa.addPolyline(polylineOptions);
+        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(routeCoordinates.get(0), 15));
     }
 }

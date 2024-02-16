@@ -24,6 +24,7 @@ import com.example.ucemap.service.listaOpcionesFactory.IListaOpcionesFactory;
 import com.example.ucemap.service.listaOpcionesFactory.ListaOpcionesFactory;
 import com.example.ucemap.ui.adapters.RecycleViewAdaptadorListaEntradas;
 import com.example.ucemap.ui.adapters.RecycleViewAdaptadorListaOpcionesEscogidas;
+import com.example.ucemap.utilidades.FuncionesAdicionales;
 import com.example.ucemap.utilidades.InstruccionesPorVoz;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -47,15 +48,16 @@ public class ListaEntradasActivity extends AppCompatActivity implements OnMapRea
 
     GoogleMap mapa;
     private List<Posicion> entradasPosicion;
-    private LatLng p1,p2,p3,p4,p5,p6,p7,p8,po;
-    private Marker m1,m2,m3,m4,m5,m6,m7,m8;
+    private LatLng posicionGeneral;
+    private Marker marcadorGeneral;
+    private String validar;
+    private Integer validarEntero;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.lista_entrada);
-
         //Implemente Mapa Aqui
         //----------------------------------------------------------------------------
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.idMapaEntradas);
@@ -93,9 +95,14 @@ public class ListaEntradasActivity extends AppCompatActivity implements OnMapRea
                 throw new RuntimeException(e);
             }
         }
+
+
+
         //Me tocan mi parte del codigo y los saco del grupo
         //-------------------------------------------------------------------------------------------
         entradasPosicion = EntradasHolder.getEntradasPosiciones();
+        validar = FuncionesAdicionales.extraerNumeroString(listaOpciones.get(0));
+        validarEntero = Integer.parseInt(validar);
 
     }
 
@@ -114,65 +121,16 @@ public class ListaEntradasActivity extends AppCompatActivity implements OnMapRea
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mapa = googleMap;
         googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-        p1 = new LatLng(entradasPosicion.get(0).getLatitud(),entradasPosicion.get(0).getLongitud());
-        p2 = new LatLng(entradasPosicion.get(1).getLatitud(),entradasPosicion.get(1).getLongitud());
-        p3 = new LatLng(entradasPosicion.get(2).getLatitud(),entradasPosicion.get(2).getLongitud());
-        p4 = new LatLng(entradasPosicion.get(3).getLatitud(),entradasPosicion.get(3).getLongitud());
-        p5 = new LatLng(entradasPosicion.get(4).getLatitud(),entradasPosicion.get(4).getLongitud());
-        p6 = new LatLng(entradasPosicion.get(5).getLatitud(),entradasPosicion.get(5).getLongitud());
-        p7 = new LatLng(entradasPosicion.get(6).getLatitud(),entradasPosicion.get(6).getLongitud());
-        p8 = new LatLng(entradasPosicion.get(7).getLatitud(),entradasPosicion.get(7).getLongitud());
-        po = new LatLng(-0.199490,-78.505993);
 
-        m1 = mapa.addMarker(new MarkerOptions().title("ENTRADA 1")
-                            .position(p1)
-                            .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
-                    //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_posicion_actual))
-            );
-        m1.setTag(0);
-        m2 = mapa.addMarker(new MarkerOptions().title("ENTRADA 2")
-                        .position(p2)
+        posicionGeneral = new LatLng(entradasPosicion.get(validarEntero-1).getLatitud(),entradasPosicion.get(validarEntero-1).getLongitud());
+        marcadorGeneral = mapa.addMarker(new MarkerOptions().title(entradasPosicion.get(validarEntero-1).getIdentificador())
+                        .position(posicionGeneral)
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
                 //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_posicion_actual))
         );
-        m2.setTag(0);
-        m3 = mapa.addMarker(new MarkerOptions().title("ENTRADA 3")
-                        .position(p3)
-                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
-                //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_posicion_actual))
-        );
-        m3.setTag(0);
-        m4 = mapa.addMarker(new MarkerOptions().title("ENTRADA 4")
-                        .position(p4)
-                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
-                //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_posicion_actual))
-        );
-        m4.setTag(0);
-        m5 = mapa.addMarker(new MarkerOptions().title("ENTRADA 5")
-                        .position(p5)
-                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
-                //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_posicion_actual))
-        );
-        m5.setTag(0);
-        m6 = mapa.addMarker(new MarkerOptions().title("ENTRADA 6")
-                        .position(p6)
-                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
-                //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_posicion_actual))
-        );
-        m6.setTag(0);
-        m7 = mapa.addMarker(new MarkerOptions().title("ENTRADA 7")
-                        .position(p7)
-                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
-                //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_posicion_actual))
-        );
-        m7.setTag(0);
-        m8 = mapa.addMarker(new MarkerOptions().title("ENTRADA 8")
-                        .position(p8)
-                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE))
-                //.icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_posicion_actual))
-        );
-        m8.setTag(0);
+        marcadorGeneral.setTag(0);
+        marcadorGeneral.showInfoWindow();
 
-        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(po, (float) 15.5F));
+        mapa.moveCamera(CameraUpdateFactory.newLatLngZoom(posicionGeneral, (float) 15.5F));
     }
 }

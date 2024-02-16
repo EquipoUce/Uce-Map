@@ -38,10 +38,9 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.android.gms:play-services-maps:18.2.0")
 
-    implementation("com.android.volley:volley:1.2.1")
+
     implementation("com.google.android.gms:play-services-maps:18.2.0")
-    implementation("com.google.android.gms:play-services-location:21.1.0")
-    implementation("com.squareup.okhttp3:okhttp:4.9.3")
+
 
 
     testImplementation("junit:junit:4.13.2")
