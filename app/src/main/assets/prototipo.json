@@ -13,9 +13,9 @@
             ],
             "informacion": "Edificio de con una altura de 6 pisos, su diseño es de cemento, ladrillo y losa. Los colores son amarillo claro, blanco, beige claro, rosa pastel. Está ubicado justo atrás de la biblioteca general universitaria y la facultad de ciencias",
             "descripcion":[
-                "1. Acceso más cercana es por la entrada numero 5",
-                "2. Ubicada en las calles Jeronimo Leiton y Gilberto Gato Sobral",
-                "3. Se camina aproximadamente 500 metros en dirección hacia el sur",
+                "1. Acceso más cercano es por la entrada numero 5",
+                "2. Ubicado en las calles Jeronimo Leiton y Gilberto Gato Sobral",
+                "3. Se camina aproximadamente 500 metros en dirección al sur",
                 "4. Se obsevará hacia la derecha un edificio rojizo con blanco"
             ],
             "latitud": -0.199490,
@@ -31,21 +31,21 @@
             ],
             "informacion": "Edificio de dos pisos, su diseño la mayor parte es de cemento y bloque, sus colores representativos son el beige claro, marrón claro y el amarillo. Se encuentra ubicado entre el colegio menor y la facultad de ciencias psicológicas",
             "descripcion":[
-                "1. Acceso más cercana es por la entrada numero 7",
-                "2. Ubicada en la calle Bolivia y Eustogio Salgado, en caso de estar cerrada",
+                "1. Acceso más cercano es por la entrada numero 7",
+                "2. Ubicado en la calle Bolivia y Eustogio Salgado, en caso de encontrarse cerrada",
                 "3. Segundo acceso cercano es por la entrada numero 8",
-                "4. Ubicada en la calle Bolivia",
+                "4. Ubicado en la calle Bolivia",
                 "5. Se camina aproximadamente 200 metros en dirección hacia el este",
                 "6. Se girará hacia la izquierda en la intersección",
-                "7. Se camina aproximadamente 60 metros en dirección hacia el norte",
-                "8. Se obsevará hacia la izquierda una interseccion",
-                "9. Se camina aproximadamente 300 metros en dirección hacia el norte",
+                "7. Se camina aproximadamente 60 metros en dirección al norte",
+                "8. Se obsevará hacia la izquierda en una intersección",
+                "9. Se camina aproximadamente 300 metros en dirección al norte",
                 "10. Se girará hacia la izquierda en la intersección",
-                "11. Se camina aproximadamente 60 metros en dirección hacia el sur",
-                "12. Se ingresa en la interseccion hacia la derecha",
-                "13. Se camina aproximadamente 150 metros en dirección hacia el oeste",
-                "14. Se ingresa en la interseccion hacia la derecha",
-                "15. Se camina aproximadamente 50 metros en dirección hacia el sur",
+                "11. Se camina aproximadamente 60 metros en dirección al sur",
+                "12. Se ingresa en la intersección hacia la derecha",
+                "13. Se camina aproximadamente 150 metros en dirección al oeste",
+                "14. Se ingresa en la intersección hacia la derecha",
+                "15. Se camina aproximadamente 50 metros en dirección al sur",
                 "16. Se girará hacia la izquierda en la intersección",
                 "17. Finalmente, se camina aproximadamente 150 metros hacia el sur",
                 "18. Se obsevará hacia la derecha el edificio"
@@ -57,20 +57,21 @@
             "nombre": "Dirección de Posgrados",
             "servicios": ["Oficinas"],
             "imagenes": [
-                "https://i.postimg.cc/MGMs0YsL/Cielo.jpg"
+                "https://i.postimg.cc/YqVmJGhk/Edificio-Posgrados-foto1.png",
+                "https://i.postimg.cc/g00ypFGb/Edificio-Posgrados-foto2.jpg"
             ],
-            "informacion": "abcd",
+            "informacion": "Edificio de 3 pisos, la mayor parte de su estructura es de cemento y bloques. Sus colores representativos son el blanco, celeste y azul. Se encuentra ubicado detrás del hospital del día y la biblioteca general",
             "descripcion":[
-                "1. Acceso más cercana es por la entrada numero 5",
-                "2. Ubicada en las calles Jeronimo Leiton y Gilberto Gato Sobral",
-                "3. Se camina aproximadamente 350 metros en dirección hacia el sur",
-                "4. Se obsevará hacia la derecha una interseccion",
-                "5. Se sube aproximadamente 50 metros en dirección hacia el oeste",
-                "6. Se obsevará hacia la izquierda una interseccion",
+                "1. Acceso más cercano es por la entrada numero 5",
+                "2. Ubicado en las calles Jeronimo Leiton y Gilberto Gato Sobral",
+                "3. Se camina aproximadamente 350 metros en dirección al sur",
+                "4. Se obsevará hacia la derecha en una intersección",
+                "5. Se sube aproximadamente 50 metros en dirección al oeste",
+                "6. Se obsevará hacia la izquierda en una intersección",
                 "7. Se sube aproximadamente 400 metros"
             ],
-            "latitud": -0.199739,
-            "longitud": -78.507086
+            "latitud": -0.199509,
+            "longitud": -78.506883
         }
 
     ],
@@ -89,7 +90,7 @@
             ],
             "informacion": "Edificios principales respectivamente de 5 y 3 pisos respectivamente, material  de la facultad en su totalidad es de cemento y cuarzo, sus colores representativos son el blanco y el azul. Se encuentra en la parte superior de todo el campus universitario entre el colegio Juan Montalvo y el Colegio Menor",
             "descripcion":[
-                "1. Acceso más cercana es por la entrada numero 6",
+                "1. Acceso más cercano es por la entrada numero 6",
                 "2. Ubicado en la calle Enrique Rither",
                 "3. Se camina aproximadamente 400 metros en dirección hacia el este",
                 "4. Se obsevará hacia la derecha un edificio blanco con azul"
